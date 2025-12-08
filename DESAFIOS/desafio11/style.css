@@ -53,17 +53,30 @@
         font-size: 3,5vw;
     }
     section.normal {
-        background-color: rgb(85, 92, 69);
+        background-color: white;
         color: black;
     }
     section.imagem {
        background-color: rgb(66, 66, 66);
        color: white;
+       box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.368);
     }
     section.imagem > p {
         background-color: rgba(0, 0, 0, 0.374);
         display: inline-block;
         padding: 10px;
+    }
+    section#img01 {
+        background-image: url(imagens/imagens/background001.jpg);
+        background-size: cover; /*cobre toda a área disponível*/
+        background-attachment: fixed; /*fixa a imagem ao rolar a página*/
+        background-position: center; /*centraliza a imagem*/
+    }
+    section#img02 {
+        background-image: url(imagens/imagens/background002.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
     }
     /**/
     footer {
