@@ -9,13 +9,27 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         table {
-            border-collapse: collapse;
+            border-collapse: collapse; /* remove espaços entre as bordas */
             width: 400px;
             height: 40px;
             margin: auto;
         }
+        caption {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            background-color: rgba(61, 77, 75, 0.207);
+            padding: 7px;
+        }
         thead, tfoot {
             background-color: rgba(61, 77, 75, 0.298);
+        }
+        thead > tr > th { /* cabeçalho fixo */
+            background-color: rgba(61, 77, 75, 0.298);
+            position: sticky; /* fixa o cabeçalho */
+            top: -1px; /* distância do topo até a tabela */
+        }
+        tbody > tr:nth-child(2n) { /* efeito zebra */ /* 2n(even) = pares  e 2n-1(odd) = ímpar*/ 
+            background-color: rgba(0, 255, 255, 0.2);
         }
         th, td {
             border: 1px solid black;
@@ -32,6 +46,7 @@
 <body>
     <!-- Anatomia para tabelas
             table
+                caption
                 thead
                     th, tr, td
                 tbody
@@ -40,10 +55,13 @@
                     th, tr, td
     -->
     <table>
+        <caption> <!-- Título da tabela -->
+            População dos três estados mais populosos do Brasil.
+        </caption>
         <thead>
             <tr>
-                <th>Estado </th>
-                <th>População </th>
+                <th scope="col">Estado </th>
+                <th scope="col">População </th>
             </tr>
         </thead>
         <tbody>
@@ -62,7 +80,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total</th>
+                <th scope="row">Total</th>
                 <td class="num">84 698 789</td>
             </tr>
         </tfoot>
