@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        table, th, td {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border-collapse: collapse;
+            border: 1px solid black;
+            text-align: center;
+            margin: auto;
+        }
+        td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <Table>
+        <tr>
+            <th scope="col">Grupo</th> <!--Os dados desse th está em uma única coluna-->
+            <th scope="col">Nome</th>
+            <th colspan="3" scope="colgroup">Filmes</th> <!--Grupo de coluna, pois tem mais de uma coluna de dados(td) para o mesmo th-->
+        </tr>
+        <tr>
+            <th rowspan="3
+            " scope="rowgroup">Mulheres</th> <!--Grupo de linhas, pois tem mais de uma linha de dados(td) para o mesmo th-->
+            <td>Ana Maria Santos</td> 
+            <td>Alien</td>
+            <td>Rambo</td>
+            <td>Vingadores</td>
+        </tr>
+        <tr>
+            <td>Beatriz Souza</td>
+            <td>Hulk</td>
+            <td>Inception</td>
+            <td>Batman</td>
+        </tr>
+        <tr>
+            <td>Cláudia Melo</td>
+            <td>Oblivion</td>
+            <td>Matriz</td>
+            <td>Big Hero</td>
+        </tr>
+        <tr>
+            <th rowspan="3
+            " scope="rowgroup">Homens</th>
+            <td>Bruno Mendonça</td>
+            <td>Intocáveis</td>
+            <td>Amnésia</td>
+            <td>Gladiador</td>
+        </tr>
+        <tr>
+            <td>Daniel Lourenço</td>
+            <td>Narnia</td>
+            <td>Goku</td>
+            <td>Prednda-me se puder</td>
+        </tr>
+        <tr>
+            <td>Fabiano Mota</td>
+            <td>Star Wars</td>
+            <td>Toy Story</td>
+            <td>The Flash</td>
+        </tr>
+    </Table>
+</body>
+</html>
