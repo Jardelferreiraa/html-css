@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframe</title>
+    <style>
+        iframe{
+            border: 1px dashed black;
+            width: 100vh;
+            height: 400px;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            letter-spacing: 0px; /*espaçamento entre letras*/
+            line-height: 1.5em; /*espaçamento entre linhas*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae veritatis id numquam minima consequuntur ratione? Quidem beatae libero enim laborum, quisquam dignissimos, dolores sapiente tempore aspernatur ab, eius delectus ut.</p>
+
+    <ul>
+        <li><a href="pag-extras/pag.html" target="frame">Primeira página</a></li>
+        <li><a href="pag-extras/pag2.html" target="frame">Segunda página</a></li>
+        <li><a href="pag-extras/pag3.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea expedita, cum adipisci, nihil aspernatur nostrum ullam magni deserunt itaque, autem cupiditate? Dolor nobis mollitia, est quibusdam ipsum non quos. Ratione totam aliquam harum porro autem consequuntur excepturi, suscipit qui asperiores similique id voluptas recusandae non beatae reiciendis eligendi repellendus! Ipsum officiis unde voluptate molestiae, magnam labore doloremque excepturi aliquam temporibus, repudiandae assumenda mollitia non fuga nemo? Consectetur eius ad nesciunt, est repellat perspiciatis iure minus dolore aliquid perferendis vel earum exercitationem odit fuga recusandae mollitia, repudiandae incidunt dolores inventore. Eligendi, eaque suscipit? Placeat in cumque nisi veniam velit voluptates ad, eum ratione ipsum? Explicabo fuga consectetur ea deserunt omnis deleniti atque sint, reiciendis saepe commodi nemo quasi et laudantium doloremque. Possimus sunt sit voluptate labore saepe totam. Doloribus eius, illum, tempora quidem dolorum odio aliquam eligendi ipsam placeat tempore aspernatur, distinctio aut animi veritatis dolore unde nostrum minus sit ducimus?
+    </p>
+        <!--srcdoc -> conteúdo do iframe por código-->
+    <iframe name="frame" srcdoc="<h1> Escolha uma das opções acima</h1>" frameborder="0" > <p>Seu navegador não é compatível</p></iframe>
+
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quod minima nemo. A eaque cumque, enim voluptatem, officia obcaecati nisi quas asperiores dolore, nemo maiores itaque architecto maxime deleniti provident perferendis sint at nesciunt eveniet et fugiat minima. Quam aliquam optio repudiandae commodi voluptas unde dolorum? Quibusdam ut, odio ducimus illum deserunt rem, molestias dolor accusamus molestiae laborum dolorum! Assumenda quis architecto molestiae dolor reprehenderit repellendus dolorum, explicabo ipsa dolorem. Cupiditate ipsam aliquam inventore quis! Necessitatibus fugit veniam dicta laborum!</p>
+</body>
+</html>
+<!--NAVEGAÇÃO DE ARQUIVOS:
+
+
+
+Quando exibimos conteúdo de forma local pelo nosso iframe, às vezes é interessante criar uma pasta para armazenar justamente essas páginas extras que só existem para serem exibidas pelo iframe. 
+
+
+
+Por exemplo: Dentro do nosso servidor, podemos criar uma pasta chamada "paginas-extras" e armazenar todas as páginas que serão exibidas pelo iframe nessa pasta (lembre-se que ao armazenar as páginas em outra pasta, o endereço local no iframe deve ser atualizado adicionando o caminho da pasta). 
+
+
+
+IFRAME INTERATIVO:
+
+
+
+Quando você cria um iframe para exibir uma página de seu interesse, eventualmente você pode querer substituir essa página que está configurada no iframe por outra... Naturalmente, para alterar a página que está sendo exibida, você muda o endereço contido no parâmetro src do iframe.
+
+
+
+Entretanto, também é possível realizar essa transição de página de forma interativa, atribuindo essa ação para o próprio usuário.
+
+
+
+Por exemplo, considerando que você tenha uma página primária com um iframe dentro, e que também tenha mais três outras páginas secundárias: 
+
+
+
+Para fazer a transição interativa dessas três páginas no seu iframe, é necessário que você, lá na página primária, monte uma lista com os links das três páginas secundárias. Exemplo:
+
+
+- Primeira página
+- Segunda página
+- Terceira página
+
+
+
+A partir daí, queremos que quando o usuário clique em algum desses links, a respectiva página secundária seja renderizada no iframe (e não será necessário recarregar a página primária para que isso ocorra). 
+
+
+
+Para tal, na tag do iframe você precisa inserir o parâmetro " name ", e atribuir a ele uma nomenclatura (de sua preferência - ex: 'frame')
+
+
+
+Agora, para associarmos os nossos links de páginas secundárias ao iframe, devemos inserir na tag dos links (<a></a>) o parâmetro "target", tendo como valor justamente a nomenclatura do parâmetro "name" ('frame' no caso do nosso exemplo).
+
+
+
+Feito isso, ao clicarmos em algum link da lista, a respectiva página secundária será carregada no iframe. Dessa forma conseguimos criar um sistema de navegação numa página primária e interagir abrindo páginas secundárias dentro do iframe... E isso tudo apenas usando links com o target apontando para o "name" do nosso iframe (lembre-se que para fazer isso o parâmetro name é obrigatório - e esse name tem que ser exatamente o mesmo que usamos no target)  
+
+
+
+Nota: Inicialmente, quando a nossa página primária for carregada, o nosso iframe estará vazio... Isso se deve ao fato de que não especificamos nenhuma página dentro do parâmetro src dele. Se você quiser que inicialmente (antes de clicarmos em qualquer link da lista de páginas secundárias) o iframe seja carregado com alguma página, é só inserir o endereço no parâmetro src do iframe. 
+
+
+
+PARÂMETRO NAME:
+
+
+
+Sobre o parâmetro "name", de certa maneira ele serve para identificar um elemento, assim como o parâmetro "id" faz...
+
+
+
+De forma geral, pode-se dizer que o id é importante para o browser (front-end), para a manipulação do DOM (arvore do documento) e CSS; e o name é importante para o servidor (back-end).
+
+
+
+O name é principalmente usado para elementos de <form>, ou seja para campos de inserção de dados e é exatamente o name que identifica no servidor o campo. Quando o envio de um form é executado, os campos dele vão para o servidor num objeto cujas chaves são o name que esses elementos têm.
+
+
+
+E diferente do "id", pode haver mais do que um elemento com o mesmo "name"...
+
+
+
+Uma outra funcionalidade do parâmetro "name" é a seguinte: Ao invés de atualizar a página, fazer uma submissão de formulário para um iframe... Ainda que o action esteja apontando para outra página, a renderização da mesma se dará dentro do iframe. (usamos o name para isso nesse exercício)
+
+
+
+Mas como foi dito, geralmente o atributo name serve para representar uma coleção de valores, enviados através de um formulário, para o servidor... Algo um pouco mais avançado.-->
