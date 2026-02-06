@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.187);
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.332);
+            border-radius: 10px 10px 0px 0px; /* Arredondar apenas os cantos superiores */
+        }
+    </style>
+</head>
+<body>
+    <H1>Meu primeiro formulário</H1>
+    <form autocomplete="off" action="cadastro.php" method="post">
+        <!--action é para onde os dados serão enviados e method é o método de envio (get[Aparece as informações na url], até 3mil letras, posters e não usar em dados sensíveis ou post[Não aparece]. mesmo com post, ainda conseguimos ver nas conf de dev, precisa usar https para proteger 100%.)-->
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+        <!--O label serve para criar umq relação de uma coisa com a outra. Aqui criou-se uma relção entre o input(caixa) e o parágrafo (nome)-->
+    </form>
+</body>
+</html>

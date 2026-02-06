@@ -1,0 +1,1 @@
+Tem que aprender php, filhão kkkkkkkkkkkk (Nesse exemplo)
