@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste de formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background-color: rgba(121, 121, 121, 0.058);
+            box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.256);
+            border-radius: 10px 10px 0px 0px;
+            margin-top: 5px;
+        }
+        h1 {
+            text-align: center;
+            color: rgba(0, 0, 128, 0.56);
+            background-color: rgba(121, 121, 121, 0.413);
+            box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.158);
+            border-radius: 10px 10px 0px 0px;
+        }
+        #boton {
+            text-align: right;
+        }
+        p {
+            margin: 8px;
+            padding: 1px;
+        }
+    </style>
 </head>
 <body>
     <h1>Teste de formulário</h1>
@@ -28,7 +53,7 @@
             <label for="Ihora">Horário da prova:</label>
             <input type="time" name="hora" id="ihora" required>
         </p>
-        <p>
+        <p id="boton">
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
     </form>
