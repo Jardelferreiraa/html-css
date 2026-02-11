@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/*
+1 mobile devices – 320px — 480px.
+2 iPads, Tablets – 481px — 768px.
+3 Small screens, laptops – 769px — 1024px.
+4 Desktops, large screens – 1025px — 1200px.
+5 Extra large screens, TV – 1201px, and more.
+  */
+
+@media print {
+    body {
+        background-image: none;
+        font-family: 'Courier New', Courier, monospace;
+        color: black;
+        text-shadow: none;
+    }
+    main {
+        border: solid 1px black;
+    }
+    main::after {
+        content: "Impressão realizada" 
+    }
+    img#cell{ display:none;}
+    img#tablet{ display: none;}
+    img#imp{ display: block;}
+    img#pc{ display: none;}
+    img#tv{ display: none;}
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#cell{ display:none;}
+    img#tablet{ display: block;}
+    img#imp{ display: none;}
+    img#pc{ display: none;}
+    img#tv{ display: none;}
+} /*2*/
+
+@media screen and (min-width: 1025px) and (max-width: 1600px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#cell{ display:none;}
+    img#tablet{ display: none;}
+    img#imp{ display: none;}
+    img#pc{ display: block;}
+    img#tv{ display: none;}
+} /*4*/
+
+@media screen and (min-width: 1601px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    img#cell{ display:none;}
+    img#tablet{ display: none;}
+    img#imp{ display: none;}
+    img#pc{ display: none;}
+    img#tv{ display: block;}
+} /*5*/
