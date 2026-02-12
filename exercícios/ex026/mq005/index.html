@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Media query</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estil/style.css">
+    <link rel="stylesheet" href="estil/mq.css">
+</head>
+<body onresize="mudouTamanho">
+    <h1>Meu Site</h1>
+    <header>
+        <i id="men" class="material-icons" onclick="clickMenu()">menu</i>
+        <ul id="itens">
+            <li><a href="#">Opção 1</a></li>
+            <li><a href="#">Opção 2</a></li>
+            <li><a href="#">Opção 3</a></li>
+            <li><a href="#">Opção 4</a></li>
+            <li><a href="#">Opção 5</a></li>
+        </ul>
+    </header>
+    <main>
+            <h2>Testando media queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor a culpa sapiente cupiditate repudiandae qui? Unde magnam quod ut eveniet consectetur nemo dignissimos veritatis quis. Nam rerum libero repudiandae enim doloribus hic molestiae excepturi. Odit est expedita quas animi reprehenderit maxime iste similique quia molestias, ratione consectetur nulla rerum. Sed, nostrum. Modi aut aliquam quaerat numquam ea ad molestiae? Ullam, aperiam tempora distinctio hic dolore suscipit, illo eum aliquam laudantium non delectus sapiente impedit, quae debitis aut amet nobis eius eos libero ipsam voluptas. Harum et eaque facilis repudiandae itaque sapiente cum non dolorem odit. Nemo tenetur quis enim quos!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illo, facilis fuga, delectus voluptatibus praesentium error doloremque provident saepe minus omnis quidem quae. Quidem velit ratione numquam eius consectetur cum, illum nam sequi. Rerum reiciendis fugiat, incidunt unde iste dolorum.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ut consequuntur ullam fugiat quos necessitatibus dignissimos nam optio maxime veniam voluptates sit aliquam tenetur totam quis id, repellat molestias. Officia asperiores ducimus placeat, eius hic perferendis suscipit, voluptate itaque voluptatibus tenetur pariatur sunt possimus eum culpa repellat, modi temporibus praesentium nobis? Iure cum ea mollitia numquam asperiores molestiae dignissimos quasi officiis vitae itaque expedita, provident iusto dolor voluptatum recusandae dolore.
+            </p>
+    </main>
+    <script>
+        function clickMenu() {
+            let itens = document.getElementById('itens');
+            if (itens.classList.contains('ativo')) {
+                itens.classList.remove('ativo');
+            } else {
+                itens.classList.add('ativo');
+            }
+        }
+
+        function mudouTamanho() {
+            let itens = document.getElementById('itens');
+            if (window.innerWidth > 600) {
+                itens.classList.remove('ativo');
+            }
+        }
+    </script>
+</body>
+</html>
