@@ -12,6 +12,9 @@
         flex-direction: row;
         flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha quando não houver espaço suficiente na linha atual. */
         /* flex-flow: row wrap;  Combina as propriedades flex-direction e flex-wrap em uma única declaração.  */
+        justify-content: center; /* Alinha os itens horizontalmente ao centro do contêiner. start, end, space-aroud, space-evenly e space-between*/
+        height: 400px;
+        align-items: center; /* Alinha os itens verticalmente para preencher toda a altura do contêiner. start, end, center, baseline e stretch. */
     }
 
     .item {
@@ -19,7 +22,7 @@
         border: 1px solid black;
         text-align: center;
         padding: 10px;
-        flex: auto;
+        flex: aut; /* Faz com que os itens ocupem o mesmo espaço disponível, dividindo-o igualmente entre eles. */
     }
 </style>
 <body>
