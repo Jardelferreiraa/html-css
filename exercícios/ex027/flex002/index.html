@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<style>
+    .conteiner {
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: row; /* Define a direção dos itens como linha (horizontal). row-reserve é da direita para a esquerda.*/
+        /*flex-direction: column;*/ /* Define a direção dos itens como coluna (vertical). column-reverse é de baixo para cima. */
+    }
+
+    .item {
+        background-color: darksalmon;
+        border: 1px solid black;
+        padding: 3px;
+        flex: auto; /* Faz com que os itens ocupem o mesmo espaço disponível, dividindo-o igualmente entre eles. */
+    }
+</style>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+        <div class="item">d</div>
+    </div>
+
+    
+    <img width="500px" src="../img/Captura de tela 2026-02-16 134558.png" alt="">
+    <img width="500px" src="../img/Captura de tela 2026-02-16 134609.png" alt="">
+    <img width="500px" src="../img/Captura de tela 2026-02-16 142144.png" alt="">
+    <img width="500px" src="../img/Captura de tela 2026-02-16 142200.png" alt="">
+    
+
+</body>
+</html>
