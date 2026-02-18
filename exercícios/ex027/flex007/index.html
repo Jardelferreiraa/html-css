@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<style>
+    .conteiner {
+        background-color: aquamarine;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        height: 400px;
+    }
+
+    .item {
+        background-color: darksalmon;
+        border: 1px solid black;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #i2 {
+        align-self: stretch; /* preenche */
+    }
+
+    #i3 {
+        align-self: center; /* centraliza */
+    }
+
+    #i4 {
+        align-self: flex-start; /* no começo do cross */
+    } /* se fosse 'auto' ou 'inherit' herdaria a conf do 'pai', ou seja, flex-start*/
+
+    #i5 {
+        align-self: flex-end; /* no fim do cross */
+    }
+</style>
+<body>
+    <div class="conteiner">
+        <div class="item" id="i2">A</div>
+        <div class="item" id="i3">B</div>
+        <div class="item" id="i4">C</div>
+        <div class="item" id="i5">D</div>
+    </div>
+    <!-- <img width="400px" src="../img/Captura de tela 2026-02-17 211900.png" alt=""> -->
+</html>
