@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<style>
+    .conteiner {
+        background-color: aquamarine;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    #it {
+        background-color: darksalmon;
+        border: 1px solid black;
+        text-align: center;
+    }
+    /*sh -> flex = grow + shrink + basis*/
+    .item1 {
+        flex: 0 1 150px; /*O flex é uma propriedade abreviada que combina as propriedades flex-grow, flex-shrink e flex-basis. O valor 0 1 150px significa que o item não crescerá (flex-grow: 0), poderá encolher se necessário (flex-shrink: 1) e terá uma base de tamanho de 150 pixels (flex-basis: 150px). Valor padrão = flex: 0 1 auto ou initial. Nada flexível= 0 0 auto ou none. Diminui e cresce no valor natural do conteúdo= flex: 1 1 auto ou auto. se eu não colocar algum valor no "flex", assumirá o valor padrão.*/
+    }
+
+    .item2 {
+        flex: 1 0 150px;
+    }
+
+    .item3 {
+        flex: 2 3 150px;
+    }
+</style>
+<body>
+    <div class="conteiner">
+        <div id="it" class="item1">A</div>
+        <div id="it" class="item2">b</div>
+        <div id="it" class="item3">c</div>
+    </div>
+</html>

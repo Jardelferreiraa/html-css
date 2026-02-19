@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<style>
+    .conteiner {
+        background-color: aquamarine;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .item {
+        background-color: darksalmon;
+        border: 1px solid black;
+        text-align: center;
+        flex-basis: 150px; /*O flex-basis é a base do tamanho do item antes de distribuir o espaço restante. Ele pode ser definido em pixels, porcentagem ou outras unidades de medida. Se o conteúdo do item for maior que o valor definido em flex-basis, o item pode crescer para acomodar o conteúdo, a menos que haja restrições adicionais, como flex-grow ou flex-shrink.*/
+    }
+</style>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">bbbbbbbbbbbbbbbbbbbb</div>
+        <div class="item">c</div>
+        <div class="item">ddddddddddddddd</div>
+    </div>
+</html>

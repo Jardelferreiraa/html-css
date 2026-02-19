@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox</title>
 </head>
+<!--
+    Resumo:
+    - order: reordena itens no eixo principal (main axis). Valores inteiros (ex: order: -1, 0, 1).
+        Não altera alinhamento ou tamanho — apenas a posição visual entre itens.
+    - align-self: alinha o item no eixo cruzado (cross axis). Valores: auto | flex-start | flex-end |
+        center | baseline | stretch. Sobrescreve `align-items` do container para aquele item.
+    Exemplo neste arquivo:
+    - As regras #i2, #i3, #i4 e #i5 demonstram diferentes valores de `align-self`.
+    - Para testar reordenação visual, adicione `order` (ex: `#i2 { order: 2 }`).
+-->
 <style>
     .conteiner {
         background-color: aquamarine;

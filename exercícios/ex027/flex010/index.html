@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<style>
+    .conteiner {
+        background-color: aquamarine;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .item {
+        background-color: darksalmon;
+        border: 1px solid black;
+        text-align: center;
+        flex-basis: 250px;
+        flex-grow: 0; /*O flex-grow é a capacidade de um item crescer para preencher o espaço disponível no contêiner flexível. Ele é definido como um número inteiro, onde um valor de 0 significa que o item não crescerá além do seu tamanho inicial, enquanto um valor maior que 0 indica que o item pode crescer proporcionalmente ao espaço disponível. Se todos os itens tiverem um valor de flex-grow igual, eles crescerão igualmente para preencher o espaço restante. Se um item tiver um valor de flex-grow maior que os outros, ele crescerá mais do que os outros itens para ocupar o espaço disponível.*/
+        flex-shrink: 1; /*O flex-shrink é a capacidade de um item encolher para se ajustar ao espaço disponível no contêiner flexível. Ele é definido como um número inteiro, onde um valor de 0 significa que o item não encolherá além do seu tamanho inicial, enquanto um valor maior que 0 indica que o item pode encolher proporcionalmente ao espaço disponível. Se todos os itens tiverem um valor de flex-shrink igual, eles encolherão igualmente para se ajustar ao espaço restante. Se um item tiver um valor de flex-shrink maior que os outros, ele encolherá mais do que os outros itens para se ajustar ao espaço disponível.*/
+    }
+</style>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+    </div>
+</html>
