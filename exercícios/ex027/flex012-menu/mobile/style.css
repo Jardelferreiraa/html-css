@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+header, header > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > h1 {
+    order: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 12px 0;
+}
+
+header > div > nav > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+header > div > nav > ul > li{
+    width: 90vw;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+header > div > nav > ul > li > a{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    text-decoration: none;
+    text-align: center;
+}
+    

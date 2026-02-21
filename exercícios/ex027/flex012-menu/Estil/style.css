@@ -20,6 +20,7 @@ header {
 
 header h1 {
     font-size: 30px;
+    flex: 0 0 200px;
     text-shadow: 1px 1px 2px #000000;
     color: white;
 }
@@ -27,6 +28,8 @@ header h1 {
 header > div > nav > ul{
     list-style: none;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
 }
 
 header > div > nav > ul > li {
@@ -44,6 +47,13 @@ header > div > nav > ul > li > a {
 header > div > nav > ul > li:hover {
     background-color: #adadad69;
     cursor: pointer;
+}
+
+#conteiner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 main {
