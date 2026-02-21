@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+section > p {
+    width: 100%;
+}
+
+.ext2 {
+    margin: auto;
+}
+
+img {
+    margin: auto;
+}
