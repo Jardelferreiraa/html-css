@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout na prática</title>
+</head>
+<style>
+    .container {
+        display:grid;
+        border: 3px solid rgb(114, 101, 255);
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 100px 100px 100px;
+        gap: 10px;
+        align-items: stretch;
+        justify-items: stretch;
+        align-content: stretch;
+        justify-content: stretch;
+    }
+
+    .item {
+        border: 2px solid rgb(255, 0, 0);
+        display: flex;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+</body>
+</html>
