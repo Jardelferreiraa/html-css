@@ -9,17 +9,17 @@
     .container {
         display:grid;
         border: 3px solid rgb(114, 101, 255);
-        grid-template: repeat(3, 100px) / repeat(3, auto);
-        grid-auto-columns: 100px;
-        grid-auto-rows: 100px; 
+        grid-template: repeat(3, 70px) / 1fr 3fr 1fr;
+        grid-auto-columns: 80px;
+        grid-auto-rows: 70px; 
+        grid-auto-flow: row; /* por padrão, o grid-auto-flow é row, ou seja, ele preenche as linhas primeiro, mas com column ele preenche as colunas primeiro */
         gap: 10px;
-        place-items: center center;
-        place-content: space-around space-between;
+        place-items: normal normal;
+        place-content: normal normal;
     }
 
     .item {
         border: 2px solid rgb(255, 0, 0);
-        display: flex;
     }
 </style>
 
@@ -34,6 +34,7 @@
         <div class="item">7</div>
         <div class="item">8</div>
         <div class="item">9</div>
+        <div class="item">10</div>
     </div>
 </body>
 </html>
